@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qastiza Cheesecake - Obrador Artesanal</title>
+    <meta name="description"
+        content="Descubre el auténtico sabor de nuestras tartas de queso artesanales. Haz tu pedido por WhatsApp. Próximamente en Torres de la Alameda.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="logo">Qastiza</div>
+        <nav class="nav">
+            <a href="#filosofia">El Obrador</a>
+            <a href="#menu">Nuestras Tartas</a>
+            <button class="nav-cart-btn" aria-label="Abrir carrito">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="20"
+                    height="20"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="currentColor"
+                        d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                </svg>
+                <span class="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">El auténtico sabor<br>artesanal</h1>
+            <p class="hero-subtitle">Alta repostería en Torres de la Alameda. Descubre la cremosidad de Qastiza
+                Cheesecake.</p>
+            <a href="#menu" class="btn btn-primary animate-btn">Ver la Carta</a>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="filosofia" class="philosophy">
+        <div class="container philosophy-grid">
+            <div class="philosophy-text fade-in">
+                <h2>Oso y Pasión en cada Horneo</h2>
+                <p>Nuestras tartas de queso están elaboradas siguiendo recetas tradicionales con un toque de innovación.
+                    Buscamos esa textura perfectamente cremosa en el centro y ligeramente tostada por fuera que
+                    caracteriza a nuestra "Basque Style Cheesecake".</p>
+                <p>Utilizamos solo ingredientes de la más alta calidad: quesos seleccionados, huevos camperos y mucha
+                    dedicación.</p>
+            </div>
+            <div class="philosophy-image fade-in">
+                <!-- We will use the hero image or a nice placeholder pattern -->
+                <div class="image-placeholder"><img src="assets/img/hero-cheesecake.png" alt="Qastiza Cheesecake"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title fade-in">Nuestras Joyas</h2>
+            <div class="product-grid">
+
+                <!-- Product 1 -->
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="assets/img/hero-cheesecake.png" alt="La Clásica - Qastiza">
+                    </div>
+                    <div class="product-info">
+                        <h3>La Clásica Qastiza</h3>
+                        <p>Nuestra receta estrella. Cremosa, suave y con un sabor intenso a queso curado equilibrado a
+                            la perfección.</p>
+                        <div class="product-sizes">
+                            <label for="size-cls">Tamaño:</label>
+                            <select id="size-cls" class="size-select">
+                                <option value="S" data-price="16">Pequeña (4 rac.) - 16€</option>
+                                <option value="M" data-price="25" selected>Mediana (8 rac.) - 25€</option>
+                                <option value="L" data-price="38">Grande (12 rac.) - 38€</option>
+                            </select>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">25€</span>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="1" data-name="La Clásica Qastiza"
+                                data-price="25" data-baseid="cls">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card fade-in" style="transition-delay: 0.1s;">
+                    <div class="product-image">
+                        <img src="assets/img/pistachio-cheesecake.png" alt="Pistacho Irani">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pistacho Iraní</h3>
+                        <p>Para los amantes de los frutos secos. Elaborada con pura pasta de pistacho iraní premium.</p>
+                        <div class="product-sizes">
+                            <label for="size-pis">Tamaño:</label>
+                            <select id="size-pis" class="size-select">
+                                <option value="S" data-price="20">Pequeña (4 rac.) - 20€</option>
+                                <option value="M" data-price="30" selected>Mediana (8 rac.) - 30€</option>
+                                <option value="L" data-price="45">Grande (12 rac.) - 45€</option>
+                            </select>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">30€</span>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="2" data-name="Pistacho Iraní"
+                                data-price="30" data-baseid="pis">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="product-image">
+                        <img src="assets/img/blue-cheese-cheesecake.png" alt="Queso Azul">
+                    </div>
+                    <div class="product-info">
+                        <h3>Queso Azul y Miel</h3>
+                        <p>Una experiencia gourmet con el carácter atrevido del queso azul y un toque dulce de miel
+                            natural.</p>
+                        <div class="product-sizes">
+                            <label for="size-blu">Tamaño:</label>
+                            <select id="size-blu" class="size-select">
+                                <option value="S" data-price="18">Pequeña (4 rac.) - 18€</option>
+                                <option value="M" data-price="28" selected>Mediana (8 rac.) - 28€</option>
+                                <option value="L" data-price="42">Grande (12 rac.) - 42€</option>
+                            </select>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">28€</span>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="3" data-name="Queso Azul y Miel"
+                                data-price="28" data-baseid="blu">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="#" class="floating-whatsapp" id="global-wa-btn" data-product="Consulta general"
+        aria-label="Contactar por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path fill="currentColor"
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="logo">Qastiza</div>
+        <p>Artesanía en queso dulce. Torres de la Alameda.</p>
+        <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Aviso Legal</a>
+        </div>
+    </footer>
+
+    <!-- Cart Overlay & Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Tu Pedido</h2>
+            <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Items will be injected here via JS -->
+            <p class="empty-cart-msg">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary-line" id="cartSubtotalLine" style="display: none;">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">0€</span>
+            </div>
+            <div class="cart-summary-line" id="cartDeliveryLine" style="display: none;">
+                <span>Envío:</span>
+                <span id="cartDeliveryCost">0€</span>
+            </div>
+            <div class="cart-summary-line" id="cartDiscountLine" style="display: none;">
+                <span>Descuento:</span>
+                <span id="cartDiscountValue">-0€</span>
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">0€</span>
+            </div>
+
+            <div class="discount-section hidden" id="discountSection">
+                <input type="text" id="discountCodeInput" placeholder="Código de descuento">
+                <button type="button" class="btn btn-outline btn-sm" id="applyDiscountBtn">Aplicar</button>
+            </div>
+            <small id="discountMessage" class="warning-text hidden" style="margin-bottom:1rem; display:block;"></small>
+
+            <form id="checkoutForm" class="checkout-form hidden">
+                <h3>Datos del pedido</h3>
+
+                <div class="delivery-options">
+                    <label class="radio-label">
+                        <input type="radio" name="deliveryType" value="pickup" checked>
+                        <span>Recogida en Obrador</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="deliveryType" value="delivery">
+                        <span>Envío a domicilio (+3€)</span>
+                    </label>
+                    <small id="deliveryWarning" class="warning-text hidden">El envío requiere al menos una tarta Mediana
+                        (M) o Grande (L).</small>
+                </div>
+
+                <input type="text" id="custName" placeholder="Tu Nombre completo" required>
+                <div id="addressField" class="hidden">
+                    <input type="text" id="custAddress" placeholder="Dirección de entrega (Solo Torres de la Alameda)">
+                </div>
+                <input type="text" id="custDetails" placeholder="Fecha y hora preferida (Ej: Viernes tarde)" required>
+                <button type="submit" class="btn btn-primary checkout-whatsapp-btn" id="confirmOrderBtn">
+                    Confirmar Pedido
+                </button>
+            </form>
+
+            <button class="btn btn-primary w-100" id="showCheckoutBtn">Tramitar Pedido</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
