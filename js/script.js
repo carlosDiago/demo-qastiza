@@ -64,6 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const applyDiscountBtn = document.getElementById('applyDiscountBtn');
     const discountMessage = document.getElementById('discountMessage');
 
+    // Upsell Options
+    const addCandleCheckbox = document.getElementById('addCandleCheckbox');
+    const upsellSection = document.getElementById('upsellSection');
+
     const whatsappNumber = "+34622415979";
 
     let cart = [];
@@ -206,6 +210,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let finalTotal = remainingAfterDiscount;
 
+        // Upsell interaction
+        if (addCandleCheckbox && addCandleCheckbox.checked) {
+            finalTotal += 2;
+        }
+
         if (!canDeliver()) {
             deliveryWarning.classList.remove('hidden');
             // If they had delivery selected, but removed all M/L items, switch them back to pickup
@@ -238,7 +247,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         cartTotalEl.textContent = formatMoney(finalTotal);
+
+        // Manage Upsell visibility (only show when there's an item in cart)
+        if (upsellSection) {
+            if (cart.length > 0) {
+                upsellSection.classList.remove('hidden');
+            } else {
+                upsellSection.classList.add('hidden');
+            }
+        }
     };
+
+    // Listen to changes on upsells
+    if (addCandleCheckbox) {
+        addCandleCheckbox.addEventListener('change', updateCartUI);
+    }
 
     // Add functionality to cart items (increase, decrease, remove)
     cartItemsContainer.addEventListener('click', (e) => {
@@ -351,6 +374,40 @@ document.addEventListener('DOMContentLoaded', () => {
             const encodedMessage = encodeURIComponent(message);
             const waUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
             window.open(waUrl, '_blank');
+        });
+    });
+
+    // B2B Contact Button
+    const b2bWA = document.getElementById('b2b-wa-btn');
+    if (b2bWA) {
+        b2bWA.addEventListener('click', (e) => {
+            e.preventDefault();
+            const message = "¡Hola Qastiza! Represento a un negocio de hostelería/eventos y me gustaría que colaborásemos.";
+            const encodedMessage = encodeURIComponent(message);
+            const waUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            window.open(waUrl, '_blank');
+        });
+    }
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.faq-answer').style.maxHeight = null;
+            });
+
+            // Toggle current if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+                const answer = item.querySelector('.faq-answer');
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
         });
     });
 

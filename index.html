@@ -76,7 +76,7 @@
                         <img src="assets/img/hero-cheesecake.png" alt="La Clásica - Qastiza">
                     </div>
                     <div class="product-info">
-                        <h3>La Clásica Qastiza</h3>
+                        <h3>La Clásica Qastiza <span class="badge badge-gf">Sin Gluten</span></h3>
                         <p>Nuestra receta estrella. Cremosa, suave y con un sabor intenso a queso curado equilibrado a
                             la perfección.</p>
                         <div class="product-sizes">
@@ -101,7 +101,7 @@
                         <img src="assets/img/pistachio-cheesecake.png" alt="Pistacho Irani">
                     </div>
                     <div class="product-info">
-                        <h3>Pistacho Iraní</h3>
+                        <h3>Pistacho Iraní <span class="badge badge-gf">Sin Gluten</span></h3>
                         <p>Para los amantes de los frutos secos. Elaborada con pura pasta de pistacho iraní premium.</p>
                         <div class="product-sizes">
                             <label for="size-pis">Tamaño:</label>
@@ -125,7 +125,7 @@
                         <img src="assets/img/blue-cheese-cheesecake.png" alt="Queso Azul">
                     </div>
                     <div class="product-info">
-                        <h3>Queso Azul y Miel</h3>
+                        <h3>Queso Azul y Miel <span class="badge badge-gf">Sin Gluten</span></h3>
                         <p>Una experiencia gourmet con el carácter atrevido del queso azul y un toque dulce de miel
                             natural.</p>
                         <div class="product-sizes">
@@ -144,6 +144,65 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof: Reviews -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title fade-in">Lo que dicen de nosotros</h2>
+            <div class="reviews-grid">
+                <div class="review-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p>"La mejor tarta de queso que he probado en Torres y alrededores. La de pistacho es una locura."</p>
+                    <span class="author">- María González</span>
+                </div>
+                <div class="review-card fade-in" style="transition-delay: 0.1s;">
+                    <div class="stars">★★★★★</div>
+                    <p>"Textura perfecta, súper cremosa por el centro y tostada por fuera. Repetiremos sin duda."</p>
+                    <span class="author">- Carlos M.</span>
+                </div>
+                <div class="review-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="stars">★★★★★</div>
+                    <p>"El toque del queso azul es sorprendentemente suave y combina genial con la miel. 10/10."</p>
+                    <span class="author">- Laura T.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Business Lines: Events & B2B -->
+    <section class="b2b-events fade-in">
+        <div class="container b2b-content">
+            <h2>Bodas, Eventos y Hostelería</h2>
+            <p>¿Tienes un restaurante y quieres sorprender a tus clientes con nuestras tartas? ¿Organizas una boda o evento especial?</p>
+            <p>Hacemos formatos grandes y trabajamos precios para profesionales con servicio recurrente.</p>
+            <a href="#" class="btn btn-primary" id="b2b-wa-btn">Contactar para Profesionales</a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Preguntas Frecuentes</h2>
+            <div class="faq-accordion fade-in">
+                <div class="faq-item">
+                    <button class="faq-question">¿Tienen opciones Sin Gluten? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Sí, nuestras tartas clásicas estilo vasco se elaboran sin bases de galleta tradicionales y utilizamos almidón de maíz en vez de harina de trigo, por lo que son aptas para celíacos. Consúltanos por sabores especiales.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Con qué antelación debo hacer mi pedido? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Al ser un obrador artesanal sin stock permanente, te recomendamos encargar tu tarta con al menos 48 horas de antelación para asegurar disponibilidad.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Cuánto tiempo aguantan en la nevera? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Nuestras tartas se mantienen perfectas durante 3-4 días refrigeradas. Recuerda sacarlas unos 30-40 minutos antes de consumir para que atemperen y recuperen su cremosidad interior.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Hacéis envíos fuera de Torres de la Alameda? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Por el momento, aseguramos envíos en Torres de la Alameda. Para localidades cercanas, por favor contáctanos por WhatsApp para consultar tarifas y opciones de entrega.</p></div>
+                </div>
             </div>
         </div>
     </section>
@@ -198,6 +257,13 @@
                 <span id="cartTotal">0€</span>
             </div>
 
+            <div class="upsell-section hidden" id="upsellSection">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="addCandleCheckbox">
+                    <span>Añadir vela de cumpleaños (+2.00€)</span>
+                </label>
+            </div>
+
             <div class="discount-section" id="discountSection">
                 <input type="text" id="discountCodeInput" placeholder="Código de descuento">
                 <button type="button" class="btn btn-outline btn-sm" id="applyDiscountBtn">Aplicar</button>
@@ -224,7 +290,10 @@
                 <div id="addressField" class="hidden">
                     <input type="text" id="custAddress" placeholder="Dirección de entrega (Solo Torres de la Alameda)">
                 </div>
-                <input type="text" id="custDetails" placeholder="Fecha y hora preferida (Ej: Viernes tarde)" required>
+                <div class="date-time-picker">
+                    <label for="custDetails" style="font-size:0.85rem; color:var(--color-text-muted); display:block; margin-bottom:0.5rem;">Fecha y hora de recogida/entrega:</label>
+                    <input type="datetime-local" id="custDetails" required>
+                </div>
                 <button type="submit" class="btn btn-primary checkout-whatsapp-btn" id="confirmOrderBtn">
                     Confirmar Pedido
                 </button>
