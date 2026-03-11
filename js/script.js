@@ -87,7 +87,25 @@ document.addEventListener('DOMContentLoaded', () => {
             cartOverlay.classList.remove('active');
             cartSidebar.classList.remove('open');
             checkoutForm.classList.add('hidden'); // Reset checkout state
-            showCheckoutBtn.style.display = 'block';
+            
+            // Re-enable cart modifications
+            cartItemsContainer.style.pointerEvents = 'auto';
+            cartItemsContainer.style.opacity = '1';
+            if (upsellSection) {
+                upsellSection.style.pointerEvents = 'auto';
+                upsellSection.style.opacity = '1';
+            }
+            const discountSection = document.getElementById('discountSection');
+            if (discountSection) {
+                discountSection.style.pointerEvents = 'auto';
+                discountSection.style.opacity = '1';
+            }
+
+            if (cart.length > 0) {
+                showCheckoutBtn.style.display = 'block';
+            } else {
+                showCheckoutBtn.style.display = 'none';
+            }
         }
     };
 
@@ -337,6 +355,19 @@ document.addEventListener('DOMContentLoaded', () => {
     showCheckoutBtn.addEventListener('click', () => {
         showCheckoutBtn.style.display = 'none';
         checkoutForm.classList.remove('hidden');
+
+        // Disable cart modifications
+        cartItemsContainer.style.pointerEvents = 'none';
+        cartItemsContainer.style.opacity = '0.5';
+        if (upsellSection) {
+            upsellSection.style.pointerEvents = 'none';
+            upsellSection.style.opacity = '0.5';
+        }
+        const discountSection = document.getElementById('discountSection');
+        if (discountSection) {
+            discountSection.style.pointerEvents = 'none';
+            discountSection.style.opacity = '0.5';
+        }
     });
 
     checkoutForm.addEventListener('submit', (e) => {
