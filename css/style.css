@@ -698,6 +698,9 @@ h3,
     padding: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     background-color: #121111;
+    max-height: 60vh;
+    overflow-y: auto;
+    flex-shrink: 0;
 }
 
 .cart-summary-line {
@@ -1087,5 +1090,15 @@ h3,
 
     .hero-title {
         font-size: 3rem;
+    }
+
+    .cart-header,
+    .cart-items,
+    .cart-footer {
+        padding: 1.2rem;
+    }
+    
+    .cart-items {
+        gap: 1rem;
     }
 }
