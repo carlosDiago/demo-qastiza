@@ -367,15 +367,15 @@ h3,
 .product-footer .btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.85rem;
-    background-color: #25d36620;
-    color: var(--color-whatsapp);
-    border: 1px solid var(--color-whatsapp);
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
 }
 
 .product-footer .btn:hover {
-    background-color: var(--color-whatsapp);
-    color: #fff;
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    background-color: var(--color-accent);
+    color: var(--color-bg-dark);
+    box-shadow: 0 5px 15px rgba(196, 154, 69, 0.3);
 }
 
 

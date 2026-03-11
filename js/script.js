@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
             cartOverlay.classList.remove('active');
             cartSidebar.classList.remove('open');
             checkoutForm.classList.add('hidden'); // Reset checkout state
-            if (discountSection) discountSection.classList.add('hidden'); // Reset discount state
             showCheckoutBtn.style.display = 'block';
         }
     };
@@ -116,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         applyDiscountBtn.addEventListener('click', () => {
             const code = discountCodeInput.value.trim().toUpperCase();
 
-            if (code === 'QASTIZA10') {
+            if (code === 'QASTIZA10' || code === 'CASTIZA10') {
                 discountApplied = true;
                 discountPercentage = 0.10;
                 discountMessage.textContent = "Cupón QASTIZA10 aplicado (-10%).";
@@ -307,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             updateCartUI();
-            toggleCart(true); // Open cart to show visual confirmation
+            // toggleCart(true); removed to prevent opening sidebar automatically
         });
     });
 
