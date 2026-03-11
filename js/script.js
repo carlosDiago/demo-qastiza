@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Basic Contact Button
-    const contactBtns = document.querySelectorAll('.btn-outline, #global-wa-btn');
+    const contactBtns = document.querySelectorAll('.btn-outline:not(#applyDiscountBtn), #global-wa-btn');
     contactBtns.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
