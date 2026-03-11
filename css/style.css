@@ -598,10 +598,15 @@ h3,
     transform: rotate(90deg);
 }
 
-.cart-items {
+.cart-body {
     flex: 1;
-    padding: 2rem;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-items {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -698,9 +703,6 @@ h3,
     padding: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     background-color: #121111;
-    max-height: 60vh;
-    overflow-y: auto;
-    flex-shrink: 0;
 }
 
 .cart-summary-line {
